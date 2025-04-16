@@ -1,0 +1,213 @@
+<!--
+Hyūga Red © 2024 – All rights reserved.
+Licensed under CC BY-NC-ND 4.0
+https://creativecommons.org/licenses/by-nc-nd/4.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hyūga Red – Independent Red Team expert specialized in social engineering and human-centered cybersecurity. Ethical attacks to reveal invisible vulnerabilities." />
+  <meta name="keywords" content="Hyuga Red, social engineering, red team, human hacking, cybersecurity, OSINT, phishing, cybersécurité, ingénierie sociale, sécurité offensive" />
+  <meta name="author" content="Hyuga Red" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Hyūga Red – Red Teaming & Social Engineering" />
+  <meta property="og:description" content="We attack what machines cannot detect — the human factor. Discover a unique approach to human-centered cybersecurity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hyuga.red" />
+  <title>Hyūga Red</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .scan-effect {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 0, 0.05),
+        rgba(0, 255, 0, 0.05) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      animation: scan 5s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes scan {
+      from {
+        background-position: 0 -100%;
+      }
+      to {
+        background-position: 0 100%;
+      }
+    }
+
+    .content {
+      z-index: 1;
+      max-width: 800px;
+      width: 90%;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 span:first-child {
+      color: #00ff88;
+    }
+
+    h1 span:last-child {
+      color: #ff0033;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff0033; }
+      to { text-shadow: 0 0 15px #ff0033; }
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .scroll-indicator {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      animation: fadeIn 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .cta {
+      margin-top: 2rem;
+    }
+
+    .cta a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: 1px solid #00ff88;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #00ff88;
+      color: #0a0a0a;
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+    }
+
+    .lang-toggle button {
+      background: transparent;
+      border: 1px solid #00ff88;
+      color: #00ff88;
+      padding: 0.3rem 0.7rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lang-toggle button:hover {
+      background-color: #00ff88;
+      color: #0a0a0a;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid #222;
+      font-size: 1rem;
+      color: #888;
+    }
+
+    footer a {
+      color: #00ff88;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .cta a { font-size: 1rem; padding: 0.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scan-effect"></div>
+  <div class="lang-toggle">
+    <button onclick="toggleLang(); this.classList.add('clicked'); setTimeout(() => this.classList.remove('clicked'), 300);">FR / EN</button>
+  </div>
+  <div class="content">
+    <h1><span>Hyūga</span> <span>Red</span></h1>
+    <p id="tagline">Red Teaming | Social Engineering | Human-Centric Cybersecurity</p>
+    <p id="intro">
+      We attack what machines cannot detect — the human factor. 
+      From phishing to physical intrusion, Hyūga Red simulates realistic and ethical scenarios
+      to reveal your organization's invisible vulnerabilities.
+    </p>
+    <div class="cta">
+      <a href="mailto:hyuga.red@proton.me">Get in touch</a>
+    </div>
+    <div class="scroll-indicator">↓ Scroll for contact</div>
+  </div>
+
+  <footer id="contact">
+    <p>📩 Contact: <a href="mailto:hyuga.red@proton.me">hyuga.red@proton.me</a></p>
+    <p>© Hyūga Red. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let isFrench = false;
+
+    function toggleLang() {
+      isFrench = !isFrench;
+      document.getElementById("tagline").innerText = isFrench
+        ? "Red Teaming | Ingénierie Sociale | Cybersécurité Humaine"
+        : "Red Teaming | Social Engineering | Human-Centric Cybersecurity";
+      document.getElementById("intro").innerText = isFrench
+        ? "Nous attaquons ce que les machines ne peuvent détecter : le facteur humain. Des campagnes de phishing aux intrusions physiques, Hyūga Red simule des scénarios réalistes et éthiques pour révéler les vulnérabilités invisibles de votre organisation."
+        : "We attack what machines cannot detect — the human factor. From phishing to physical intrusion, Hyūga Red simulates realistic and ethical scenarios to reveal your organization's invisible vulnerabilities.";
+    }
+  </script>
+</body>
+</html>
